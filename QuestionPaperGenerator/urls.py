@@ -4,6 +4,7 @@ from django.conf.urls import include, url
 from Generator.models import Mathematics
 from rest_framework import routers, serializers, viewsets
 
+
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Mathematics

@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import Mathematics
 from django.template import loader
 
+
 # Create your views here.
 def index(request):
     try:
@@ -13,5 +14,21 @@ def index(request):
     template = loader.get_template('pages/activity.html')
     return render(request, 'pages/activity.html', {'question': question_list})
 
-    # output = ', '.join([q.question_text for q in question_list])
-    # return HttpResponse(output)
+def paper(request):
+
+    if request.method=='POST':
+        x=request.POST
+        a=open('c:\Desktop\Project\QuestionPaperGenerator\q.txt','w') 
+        for i in x:
+           a.write(i)
+        a.close()
+    template = loader.get_template('pages/paper.html')
+    return render(request, 'pages/paper.html')
+    
+    
+
+   
+    
+    
+
+    
