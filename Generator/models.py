@@ -6,3 +6,5 @@ class Mathematics(models.Model):
     answer = models.CharField(max_length=1)
     marks = models.IntegerField(default=0)
     difficulty_level = models.CharField(max_length=1,blank=True)
+
+

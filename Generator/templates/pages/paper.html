@@ -1,11 +1,37 @@
-<!doctype html>
- <html lang="en">
-   <body>
-  <object width="300" height="300" type="text/plain" data="qp.txt" border="0" >
-  </object>
-  </body>
+<!DOCTYPE html>
+<html>
+  <script language="javascript" type="text/javascript"></script>
+  <body>
+    <form name='form1'  action="paper.html" method="get">
+      <div onclick = testJS()>
+        <p>Question Paper</p>
+      <div id="write">
+        <p>test</p>
+    </div>
+    </form>
 
+    <script>
+      window.addEventListener('load', () => {
+        const params=(new URL(document.location)).searchParams;
+        const que = params.get('que');
+
+        document.getElementById('result-que')
+      } )
+
+
+      function testJS() {
+        var str,
+element = document.getElementById('que')
+if (element != null) {
+    str = element.value;
+    
+}
+else {
+    str = null;
+}
+document.getElementById("write").innerHTML = str;
   
-
-
-</html>
+}
+    </script>
+</body>
+</html> 
